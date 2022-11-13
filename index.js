@@ -6,38 +6,39 @@ const listContainer = document.getElementById("list-container")
 
 const itemsInput = document.getElementById("items-input")
 
-const pushBtn = document.getElementById("push-btn")
-const unshiftBtn = document.getElementById("unshift-btn")
+const addBtn = document.getElementById("add-btn")
 
-const popBtn = document.getElementById("pop-btn")
-const shiftBtn = document.getElementById("shift-btn")
+const deleteBtn = document.getElementById("delete-btn")
+
 
 function renderList() {
     listContainer.innerHTML = ""
     for (let i = 0; i < myItems.length; i++) {
         const list = document.createElement('li')
+        list.classList.add('list-styling');
         list.textContent = myItems[i]
-        listContainer.appendChild(list)
-          list.addEventListener('click', function(){
-         list.style.textDecoration = "line-through";
-         list.style.textDecorationThickness = "3px";
-    })
-    list.addEventListener('dblclick', function(){
-        listContainer.removeChild(list);
-    })
+        listContainer.append(list)
     }
 }
 
 renderList()
 
 
-pushBtn.addEventListener("click", function(){
+addBtn.addEventListener("click", function(){
     
     if (myItems.includes(itemsInput.value)) {
             alert('Item already added')
         } else  {
         myItems.push(itemsInput.value)
         itemsInput.value = ""
-        renderList() 
+        listContainer.innerHTML = "" 
+        renderList()
         }
 })
+
+deleteBtn.addEventListener("click", function() {
+    myItems.pop()
+    renderList() 
+})
+
+

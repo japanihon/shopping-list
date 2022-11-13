@@ -18,6 +18,7 @@ body {
   flex-direction: column;
   max-width: 10%;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 #list-container list {
@@ -54,6 +55,7 @@ label {
 }
 
 input {
+  font-family: Baloo;
   margin: 0 auto;
   display: block;
   border: black solid 3px;
@@ -65,11 +67,14 @@ input {
   justify-content: center;
 }
 
-li {
+.list {
+  margin: 0;
+  cursor: pointer;
+  border: black solid 3px;
+  font-size: 20px;
   padding: 8px;
   margin: 2px auto;
   display: block;
-  border: black solid 3px;
   width: auto;
   height: auto;
   background: transparent;
@@ -95,4 +100,5 @@ button {
 input[type="text"] {
   width: 10%;
   padding: 10px 15px;
+  cursor: pointer;
 }
