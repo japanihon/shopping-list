@@ -1,0 +1,98 @@
+html {
+  height: 100vh;
+  font-family: Baloo;
+}
+
+body {
+  margin: 10px;
+  background-image: url(./blur-supermarket.jpg);
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+}
+
+#list-container {
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 10%;
+  margin: 0 auto;
+}
+
+#list-container list {
+  border: 2px solid skyblue;
+  min-width: 0%;
+  padding: 8px 13px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 15px;
+}
+
+h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: Baloo;
+  background: darkcyan;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin: 10 4px;
+}
+
+label {
+  letter-spacing: 2px;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  display: block;
+  width: auto;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+  border: black solid 3px;
+  width: auto;
+  height: auto%;
+  background: transparent;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+}
+
+li {
+  padding: 8px;
+  margin: 2px auto;
+  display: block;
+  border: black solid 3px;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 6px;
+}
+
+button {
+  font-family: Baloo;
+  background: darkcyan;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin: 0 4px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0;
+}
+
+input[type="text"] {
+  width: 10%;
+  padding: 10px 15px;
+}
