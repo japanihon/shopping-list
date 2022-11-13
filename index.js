@@ -1,10 +1,10 @@
-const myEmojis = []
+const myItems = []
 
 const name = document.getElementById("list-name")
 
-const emojiContainer = document.getElementById("emoji-container")
+const listContainer = document.getElementById("list-container")
 
-const emojiInput = document.getElementById("emoji-input")
+const itemsInput = document.getElementById("items-input")
 
 const pushBtn = document.getElementById("push-btn")
 const unshiftBtn = document.getElementById("unshift-btn")
@@ -12,28 +12,28 @@ const unshiftBtn = document.getElementById("unshift-btn")
 const popBtn = document.getElementById("pop-btn")
 const shiftBtn = document.getElementById("shift-btn")
 
-function renderEmojis() {
-    emojiContainer.innerHTML = ""
-    for (let i = 0; i < myEmojis.length; i++) {
-        const emoji = document.createElement('span')
-        emoji.textContent = myEmojis[i]
-        emojiContainer.append(emoji)
+function renderList() {
+    listContainer.innerHTML = ""
+    for (let i = 0; i < myItems.length; i++) {
+        const list = document.createElement('li')
+        list.textContent = myItems[i]
+        listContainer.appendChild(list)
     }
 }
 
-renderEmojis()
+renderList()
 
 
 */ Ingresa un nuevo item al final del array */
 
 pushBtn.addEventListener("click", function(){
     
-    if (myEmojis.includes(emojiInput.value)) {
+    if (myItems.includes(itemsInput.value)) {
             alert('Item already added')
         } else  {
-        myEmojis.push(emojiInput.value)
-        emojiInput.value = ""
-        renderEmojis() 
+        myItems.push(itemsInput.value)
+        itemsInput.value = ""
+        renderList() 
         }
 })
 
@@ -51,13 +51,13 @@ unshiftBtn.addEventListener("click", function(){
 /* Saca el primer item del  array */ 
 
 popBtn.addEventListener("click", function() {
-    myEmojis.pop()
-    renderEmojis()
+    myItems.pop()
+    renderList()
 })
 
 */ Saca el ultimo item del array */
 
 shiftBtn.addEventListener("click", function() {
-    myEmojis.shift()
-    renderEmojis()
+    myItems.shift()
+    renderList()
 })

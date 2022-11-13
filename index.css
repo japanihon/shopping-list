@@ -8,7 +8,7 @@ body {
   background-image: linear-gradient(#5da4d9, #fff);
 }
 
-#emoji-container {
+#list-container {
   margin: 20px;
   text-align: center;
   display: flex;
@@ -17,9 +17,9 @@ body {
   margin: 0 auto;
 }
 
-#emoji-container span {
+#list-container list {
   border: 2px solid skyblue;
-  min-width: 100%;
+  min-width: 0%;
   padding: 8px 13px;
   background-color: whitesmoke;
   font-weight: bold;
@@ -45,11 +45,26 @@ label {
 input {
   margin: 0 auto;
   display: block;
-  border: none;
-  height: 30px;
+  border: black solid 3px;
+  width: 50%;
+  height: 20%;
   background: white;
   border-radius: 6px;
   text-align: center;
+  justify-content: center;
+}
+
+li {
+  padding: 8px;
+  margin: 2px auto;
+  display: block;
+  border: black solid 3px;
+  width: 50%;
+  height: 40%;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
 }
 
 button {
